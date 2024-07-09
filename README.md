@@ -1,8 +1,8 @@
 # projects
-SUDOKO SOLVER
-==>Static
-      |-script.js
-      |_styles.css
-==>templates
-      |_index.html
-app.py
+SUDOKO SOLVER<br>
+==>Static<br>
+      |-script.js<br>
+      |_styles.css<br>
+==>templates<br>
+      |_index.html<br>
+app.py<br>
