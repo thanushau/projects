@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku Solver</h1>
+        <form id="sudoku-form" action="/solve" method="GET">
+            <table id="sudoku-board">
+                <!-- Generate 9x9 Sudoku board -->
+                <tbody>
+                    <script>
+                        for (let i = 0; i < 9; i++) {
+                            document.write('<tr>');
+                            for (let j = 0; j < 9; j++) {
+                                document.write(`<td><input type="text" name="cell_${i}_${j}" maxlength="1"></td>`);
+                            }
+                            document.write('</tr>');
+                        }
+                    </script>
+                </tbody>
+            </table>
+            <button type="submit">Solve</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
